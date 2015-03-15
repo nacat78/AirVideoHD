@@ -44,8 +44,18 @@ RUN chmod a+x /etc/rc.local && \
 	chown -R nobody:users /config && \
 	mkdir /conversionPath && \
 	chown -R nobody:users /conversionPath && \
-	mkdir /videos && \
-	chown -R nobody:users /videos
+	mkdir /anime && \
+	chown -R nobody:users /anime
+	mkdir /documentaries && \
+	chown -R nobody:users /documentaries
+	mkdir /kids && \
+	chown -R nobody:users /kids
+	mkdir /moveis && \
+	chown -R nobody:users /movies
+	mkdir /tv && \
+	chown -R nobody:users /tv
+        mkdir /kens && \
+	chown -R nobody:users /kens
 
 RUN mkdir /etc/service/airvideohd
 ADD airvideohd.sh /etc/service/airvideohd/run
@@ -54,6 +64,6 @@ RUN chown nobody:users /etc/service/airvideohd/run && \
 	
 EXPOSE 45633
 
-VOLUME ["/config", "/conversionPath", "/anime", "/movies", "/tv", "/kids", "/documentaries"]
+VOLUME ["/config", "/conversionPath", "/anime", "/movies", "/tv", "/kids", "/documentaries", "/kens"]
 
 ### END
