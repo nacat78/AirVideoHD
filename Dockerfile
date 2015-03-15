@@ -54,7 +54,7 @@ RUN chmod a+x /etc/rc.local && \
 	chown -R nobody:users /movies
 	mkdir /tv && \
 	chown -R nobody:users /tv
-        mkdir /kens && \
+	mkdir /kens && \
 	chown -R nobody:users /kens
 
 RUN mkdir /etc/service/airvideohd
