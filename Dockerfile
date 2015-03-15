@@ -39,21 +39,21 @@ COPY server.properties /server.properties.new
 ### Configure Service Startup
 COPY rc.local /etc/rc.local
 RUN chmod a+x /etc/rc.local && \
-    mkdir -p /config/logs && \
-    cp -n /server.properties.new /config/server.properties && \
-    chown -R nobody:users /config && \
-    mkdir /conversionPath && \
-    chown -R nobody:users /conversionPath && \
-    mkdir /videos && \
-    chown -R nobody:users /videos
+	mkdir -p /config/logs && \
+	cp -n /server.properties.new /config/server.properties && \
+	chown -R nobody:users /config && \
+	mkdir /conversionPath && \
+	chown -R nobody:users /conversionPath && \
+	mkdir /videos && \
+	chown -R nobody:users /videos
 
 RUN mkdir /etc/service/airvideohd
 ADD airvideohd.sh /etc/service/airvideohd/run
 RUN chown nobody:users /etc/service/airvideohd/run && \
     chmod a+x /etc/service/airvideohd/run
-    
+	
 EXPOSE 45633
 
-VOLUME ["/config", "/conversionPath", "/videos"]
+VOLUME ["/config", "/conversionPath", "/anime", "/movies", "/tv", "/kids", "/documentaries"]
 
 ### END
