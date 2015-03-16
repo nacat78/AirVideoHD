@@ -3,4 +3,10 @@ mkdir -p /config/logs
 cp -n /server.properties.new /config/server.properties
 chown -R nobody:users /config
 chown -R nobody:users /conversionPath
+chown -R nobody:users /anime
+chown -R nobody:users /documentaries
+chown -R nobody:users /kids
+chown -R nobody:users /movies
+chown -R nobody:users /tv
+chown -R nobody:users /kens
 exit 0
